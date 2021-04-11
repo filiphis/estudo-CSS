@@ -1,9 +1,7 @@
-<!-- :heavy_check_mark: -->
-<!-- :construction: -->
 # Estudo sobre SCSS :construction:
-
+<!-- > **_Status:_** Finalizado :heavy_check_mark: -->
+> **_Status:_** Em andamento :construction:
 ## Descrição
-
 Repositório para estudar e anotar os conceitos sobre CSS
 
 ## Onde foi estudado ?  :scroll:
