@@ -8,7 +8,7 @@ Repositório para estudar e anotar os conceitos sobre CSS
 
 * Conclusão do curso: [Flexbox: Posicione elementos na tela](https://cursos.alura.com.br/course/posicione-elementos-com-flexbox), segue [certificado](https://cursos.alura.com.br/certificate/luiz-fsilveira/posicione-elementos-com-flexbox).
 
-* 
+<!-- *  -->
 
 
 ## Tecnologias Utilizadas/Estudadas
