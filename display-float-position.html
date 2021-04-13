@@ -1,0 +1,78 @@
+<!-- :: Display:inline :: 
+    - Não é possivel definir largura e altura, elas serão setadas automaticamente com base no conteudo.
+    - Este display setá como se fosse um comportamento de palavra, por padrão terá um espaço entre os itens inline na mesma linha.
+    - text-align deve ser no elemento pai dos inline's/palavras
+    - Não é possivel utilizar margin, somente pode ser utilizada em elementos com largura/altura
+    - É possivel utilizar padding normalmente.
+-->
+
+<!-- :: Display:block :: 
+    - É possivel setar largura e altura
+    - Elementos block utilizam todo espaço da linha, não sendo possivel deixar dois block's lado a lado.
+    - para posicionar o elemento na linha, é necessario setar um width.
+    -  margin-left: auto; ->> Insere margin do lado esquerdo empurando o elemento para o lado direito
+    -  margin-right: auto; ->> Insere margin do lado direito empurando o elemento para o lado esquerdo
+    - margin-left: auto; & margin-right: auto; =>> Centralizam o elemento
+-->
+
+<!-- :: Display:inline-block :: 
+    - Elementos ficam um do lado do outro
+    - É possivel utilizar as propriedades de elementos block, como margin/largura/altura
+    - Para posicionar elementos inline-block, devemos setar um text-aligin para o seu elemento pai
+    - text-align-last: justify; ->> distribui os elementos inline/inline-block igualmente na linha em que estão.
+    - 
+-->
+
+<!-- OBS: Dê preferencia na utilização das novas propriedades de display, o flex e grid. -->
+
+<!-- :: Float :: 
+    - Ao utilizar float é criado um novo contexto para o elemento, onde esse elemento fica "acima" do contexto do browser padrão. Esse novo contexto nunca escondera o CONTEUDO dos elementos que estão no contexto padrão
+    - Caso o container pai não estja respeitando os elementos filhos que tenham a propriedade float, é necessario definir um overflow:hidden; para o elemento pai, e ele irá recalcular o espaçamento.
+    - clear: ->> Procura se tem algum elemento flutuante no lado citado, e caso sim, irá sair do contexto dos elementos.
+
+-->
+
+<!-- :: Position static & relative :: 
+    //Static
+    - Static é o position padrão dos elementos
+    - Ao utilizar top, left, right, bottom, os elementos não irão se mover.
+
+    //Relative
+    - Position relative informa que o elemento irá ter a posição inicial, onde foi criado.
+    - top, left, right, bottom funcionam normalmente em elementos relative.
+    - top, left, right, bottom empurram o elemento contra a direção informada. ( mesmo conceito da margin )
+    - o eixo Z (z-index) nos permite posicionar elementos um na frente do outro (outro contexto).
+
+-->
+
+<!-- :: Position: absolute :: 
+
+    - Utiliza como referência a tela
+    - Um elemento absolute só irá respeitar o elemento pai, se o position do pai for diferente de static
+    - É criado um novo contexto
+    - 
+
+-->
+
+<!-- :: Position: fixed :: 
+
+    - Elementos ficam fixo com relação a janela do navegador, mesmo após rolagem ficam fixo!
+    - É criado um novo contexto, e deixa o espaço que era utilizado vago, assim outros elementos irão se alocar para este espaço.
+    - A largura/altura são definidas pelo conteudo, caso queira um valor diferente, deve ser informado.
+
+
+-->
+
+<!-- :: DICAS :: 
+    - Eixo X = Horizontal; 
+    - Eixo Y = Vertical;
+    - margin, top, bottom, left e right empurram o elemento contra a direção informada
+
+    //Centralizando elementos com display:relative/block/fixed:
+        .elemento {
+            display:fixed;
+            right:50%;
+            top: 50%;
+            tramsform: translate(-50%, -50%);
+        }
+-->

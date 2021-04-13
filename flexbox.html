@@ -1,0 +1,162 @@
+<!-- PROPRIEDADES PARA O ELEMENTO PAI -->
+
+<!-- :: display:flex :: 
+
+    - É setado no elemento pai, para então, posicionarmos seus filhos.
+    - Quem eu quero posicionar ? então o display:flex vai no elemento pai.
+    - Por padrão os elementos ficam em linha ( flex-direction: row )
+    - ** Por padrão, todos os elementos filhos terão a mesma altura/heigth. **
+    - "Transforma todos os elementos filhos em inline-block"
+    - Caso os elementos filhos não possuam altura/largura, é necessario definir manualmente, de preferencia em %.
+
+-->
+
+<!-- :: justify-content :: 
+
+    - Padrão: flex-start;
+    - É utilizado no elemento/container "pai"
+    - Move os elementos filhos no eixo principal (main axis), por padrão horizontalmente.
+    - Ao utilizar flex-direction: column, altera a direção dos eixos main-axis/cross-axis
+    - É Necessario que tenha espaço sobrando no container, para que os elementos filhos possam ser posicionados
+    -
+-->
+
+<!-- :: align-items ::
+
+    - É utilizado no elemento/container "pai" 
+    - Move os elementos filhos no eixo cruzado (cross axis), por padrão verticalmente.
+    - Ao utilizar flex-direction: column, altera a direção dos eixos main-axis/cross-axis
+    - É Necessario que tenha espaço sobrando no container, para que os elementos filhos possam ser posicionados
+
+-->
+
+<!-- :: flex-direction :: 
+
+    - Padrão: flex-direction: row
+    - Ao utilizar esta propriedade, altera a direção dos eixos main-axis/cross-axis
+    - flex-direction: row-reverse; ->> Inverte a ordem dos ELEMENTOS NAS LINHAS.
+
+-->
+
+<!-- :: flex-wrap :: 
+
+    - Padrão: flex-wrap: nowrap    ->> Os itens podem transbordar o elemento pai.
+    - flex-wrap: wrap      ->> Itens flex não transbordam o elemento pai e ocorre uma quebra de linha quando não tiver mais espaço disponivel.
+    - flex-wrap: wrap-reverse; ->> Inverte a ORDEM DAS LINHAS.
+
+
+-->
+
+<!-- :: flex-flow = flex-direction + flex-wrap ::  
+    
+    - Abrviação de flex-direction + flex-wrap
+    - Por padrão é -> flex-flow: row nowrap 
+
+-->
+
+<!-- PROPRIEDADES PARA ELEMENTOS FILHOS -->
+
+<!-- :: order :: 
+    - Padrão: 0
+    - É possivel alterar a ordem dos elementos filhos de um flex container, basta informar para a um elemento filho especifico qual será sua posição.
+    - order:-1 o item irá ficar antes de todos os outros, e assim sucessivamente
+
+    DICA: É interessante utilizar essa propriedade para alterar posições somente no responsivo!
+-->
+
+<!-- :: flex-grow :: 
+
+    - Padrão: 0 ->> 
+    - Por padrão os flexItens não ocupam todo o espaçamento disponivel no container, somente o necessário para o seu conteudo
+    - Define como o ESPAÇO RESTANTE NO CONTAINER será distribuido entre os flexItens. 
+    - FlexItens crescerão proporcionalmente(%) ao valor informado. 
+    - Se apenas um flexItem tiver flex-grow:1, este item irá ocupar TODO o espaço RESTANTE no container pai.
+    - Caso o seja flex-grow:1 para todos os flexItens, o espaço restante no container será distribuído igualmente para todas os flexItens.
+    - Se um flexItem tiver flex-grow:2, irá TENTAR ocupar o dobro do espaço restante em relação aos outros flexItens    .
+
+// Conta que o navegador faz para calcular:
+    Considere o espaço vazio inicial: 600 px.
+
+    Como os dois elementos tem flex-grow: 1, a soma de flex-grow que temos vai dar 1 + 1 = 2.
+
+    O navegador pega esse espaço vazio e divide pelo número de flex-grow que temos: 600 px : 2 = 300 px.
+
+    Agora ele distribui esse espaço para cada um dos elementos que colocamos flex-grow.
+
+    Elemento 1: 300 px + 200 px = 500 px.
+
+    Elemento 2: 300 px + 200 px = 500 px.
+
+-->
+
+<!-- :: flex-shrink :: 
+
+    - Padrão: 1 -> Diminuem seu tamanho igualmente entre si
+    - flex-shrink define a habilidade de um flex item de encolher em relação aos outros itens(1*, 2*, ...). 
+    - flex-shrink:0 -> O item irá se manter sempre do mesmo tamanho/fixo. // Não é recomendado utilizar!
+
+// Conta que o navegador faz para calcular:
+    Quando colocamos flex-shrink: 2 no primeiro, ele diminui de forma diferente do que os outros elementos. As contas que ocorrem são semelhantes as que ocorrem no flex-grow.
+
+    Primeiro de tudo o navegador pega o total de flex-shrink que nossos flex items tem, como temos por padrão flex-shrink: 1 nos flex items, a conta fica assim:
+
+    2 + 1 + 1 + 1 = 5. Isso pois o primeiro colocamos flex-shrink:2.
+
+    Como diminuímos 200 px do tamanho total, o navegador pega esse valor e divide pelo total de flex-shrink. Fica: 200 px : 5 = 40 px.
+
+    Dessa forma o navegador tira 2 partes do primeiro elemento 200px - 80px = 120px e tira 1 parte dos demais, ou seja: 200 px - 40 px = 160 px.
+
+-->
+
+<!-- :: flex-basis ::
+
+    - Padrão: auto;
+    - Define um tamanho padrão inicial para o elemento, como se fosse um width.
+    - Define uma largura para o elemento caso o flex container esteja com flex-direction: row.
+    - Define uma altura para o elemento caso o flex container esteja com flex-direction: column.
+
+-->
+
+<!-- :: flex = flex-grow + flex-shrink + flex-basis ::  
+    
+    - Abrviação de flex-grow + flex-shrink + flex-basis
+    - Por padrão é -> flex: 0 1 auto ;
+
+-->
+
+<!-- :: align-self :: 
+
+    - Permite que o alinhamento padrão (ou o que estiver definido por align-items) seja sobrescrito para ítens individuais.
+    - Parecida com o align-items só que alinha um único elemento e é colocada nos flexItems.
+    -  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+-->
+
+<!-- -->
+
+<!-- :: Propriedades do flexbox ::
+
+flex Container:
+    display: flex
+    flex-direction
+    justify-content
+    flex-wrap
+    flex-flow
+    align-items
+    align-content
+
+flex Item:
+    order
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex
+    align-self
+    
+-->
+
+<!-- :: Dicas/Curiosidades :: 
+
+    - As propriedades float, clear e vertical-align não têm efeito em flex-items.
+
+-->
