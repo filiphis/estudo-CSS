@@ -6,7 +6,7 @@ Repositório para estudar e anotar os conceitos sobre CSS
 
 ## Onde foi estudado ?  :scroll:
 
-<!-- * Conclusão do curso: [Sass: O CSS com superpoderes](https://cursos.alura.com.br/course/sass-css-superpoderes), segue [certificado](https://cursos.alura.com.br/certificate/luiz-fsilveira/sass-css-superpoderes). -->
+* Conclusão do curso: [Flexbox: Posicione elementos na tela](https://cursos.alura.com.br/course/posicione-elementos-com-flexbox), segue [certificado](https://cursos.alura.com.br/certificate/luiz-fsilveira/posicione-elementos-com-flexbox).
 
 * 
 
